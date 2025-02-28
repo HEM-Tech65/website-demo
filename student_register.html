@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | University Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="Images/logo.png" class="logo">
+        <h2>Student Registration</h2>
+        <form action="student_register.php" method="POST">
+            <div class="form-group">
+                <label for="school_ID">School ID:</label>
+                <input type="text" id="school_ID" name="school_ID" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" pattern="[a-z]{@}[a-z]{.}[a-z]" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" required>
+            </div>
+            <div class="form-group">
+                <label for="course">Course:</label>
+                <select id="role" name="course" required>
+                    <option value="BSc. Computer Science">BSc. Computer Science</option>
+                    <option value="BSc. Information Systems">BSc. Information Systems</option>
+                    <option value="BSc. Computer Science(Cyber Security)">BSc. Computer Science(Cyber Security)
+                    </option>
+                    <option value="BSc. Software Engineering">BSc. Software Engineering</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="group">Group:</label>
+                <select id="role" name="group" required>
+                    <option value="Group A">Group A</option>
+                    <option value="Group B">Group B</option>
+                    <option value="Group C">Group C</option>
+                    <option value="Group D">Group D</option>
+                    <option value="Group E">Group E</option>
+                    <option value="Group F">Group F</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>

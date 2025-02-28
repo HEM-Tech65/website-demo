@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | University Timetable System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="Images/logo.png" class="logo">
+        <h1 align="center">Welcome to GCTU Timetable System</h1>
+        <marquee>This system is for FOCiS Computer Science Department</marquee>
+        <p>Are you a lecturer or a student?</p>
+
+        <form id="role-form">
+            <div class="form-group">
+                <label for="role">Select your role:</label>
+                <select id="role" name="role" required>
+                    <option value="">--Select Role--</option>
+                    <option value="student">Student</option>
+                    <option value="lecturer">Lecturer</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-primary">Continue</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('role-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const role = document.getElementById('role').value;
+            if (role === 'student') {
+                window.location.href = 'student_login.html';
+            } else if (role === 'lecturer') {
+                window.location.href = 'lecturer_login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>
